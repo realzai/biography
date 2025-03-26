@@ -8,9 +8,11 @@
     "dev": "ts-node src/index.ts"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.21.2"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "@types/node": "^22.13.9",
     "ts-node": "^10.9.2",
