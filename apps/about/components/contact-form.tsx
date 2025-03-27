@@ -44,7 +44,7 @@ export const ContactForm: React.FC = () => {
   return (
     <Form {...form}>
       <form
-        className={"space-y-6 w-auto md:w-96"}
+        className={"space-y-6 w-full md:w-96"}
         onSubmit={form.handleSubmit(onSubmit)}
       >
         <FormField
