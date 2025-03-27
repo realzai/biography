@@ -1,13 +1,21 @@
-"use client"
+"use client";
 
 import React from "react";
 import { z } from "zod";
-import { Form, FormField, FormItem } from "@repo/ui/components/ui/form";
-import { useForm, } from "react-hook-form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage,
+} from "@repo/ui/components/ui/form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "@repo/ui/components/ui/input";
 import { Button } from "@repo/ui/components/ui/button";
-import {notifyAndSave} from "~/app/contact/actions";
+import { Textarea } from "@repo/ui/components/ui/textarea";
+import api from "~/lib/api";
+import { toast } from "sonner";
 
 const schema = z.object({
   email: z.string().email(),
@@ -23,22 +31,31 @@ export const ContactForm: React.FC = () => {
 
   const onSubmit = async (data: ContactFormType) => {
     try {
-      const response = await notifyAndSave(data);
+      const response = await api.post("/api/contact", data);
 
-    }catch (e){
-      console.log("ERROR ",e)
+      if (response.data.message) {
+        toast.success(response.data.message);
+      }
+    } catch (e) {
+      toast.error("Something went wrong while submitting.");
     }
   };
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)}>
+      <form
+        className={"space-y-6 w-auto md:w-96"}
+        onSubmit={form.handleSubmit(onSubmit)}
+      >
         <FormField
           name={"email"}
           control={form.control}
           render={({ field }) => (
             <FormItem>
-              <Input {...field} placeholder={"Email"} />
+              <FormControl>
+                <Input {...field} placeholder={"Enter your email"} />
+              </FormControl>
+              <FormMessage />
             </FormItem>
           )}
         />
@@ -48,12 +65,25 @@ export const ContactForm: React.FC = () => {
           control={form.control}
           render={({ field }) => (
             <FormItem>
-              <Input {...field} placeholder={"Content"} />
+              <FormControl>
+                <Textarea
+                  {...field}
+                  rows={5}
+                  placeholder={"Enter what you want to say :))"}
+                />
+              </FormControl>
+              <FormMessage />
             </FormItem>
           )}
         />
 
-        <Button type={"submit"}>Submit</Button>
+        <Button
+          disabled={form.formState.isSubmitting}
+          className={"w-full"}
+          type={"submit"}
+        >
+          Submit
+        </Button>
       </form>
     </Form>
   );

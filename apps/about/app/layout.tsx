@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { PropsWithChildren } from "react";
 import { mono } from "~/lib/fonts";
 import { Analytics } from "@vercel/analytics/next";
+import { Toaster } from "~/components/toaster";
 
 export const metadata: Metadata = {
   title: "Sai Ye Yint Aung",
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
       <body className={mono.className}>
+        <Toaster />
         {children}
         <Analytics />
       </body>

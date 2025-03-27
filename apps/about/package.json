@@ -14,10 +14,12 @@
     "@repo/ui": "workspace:*",
     "@repo/utils": "workspace:*",
     "@vercel/analytics": "^1.5.0",
+    "axios": "^1.8.4",
     "next": "14.2.8",
     "react": "catalog:react18",
     "react-dom": "catalog:react18",
     "react-hook-form": "^7.54.2",
+    "sonner": "^2.0.1",
     "zod": "^3.24.2"
   },
   "devDependencies": {
