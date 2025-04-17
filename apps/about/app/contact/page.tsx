@@ -3,8 +3,8 @@ import { Metadata } from "next";
 import profile from "@repo/data/profile";
 
 export const metadata: Metadata = {
-  title: "Contact | Sai Ye Yint Aung",
-  description: "Contact with Sai Ye Yint Aung",
+  title: "Contact me",
+  description: "Get in touch with me",
 };
 
 export default function ContactPage() {

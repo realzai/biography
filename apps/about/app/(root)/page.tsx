@@ -54,12 +54,12 @@ export default function StoryPage() {
             <div className="md:col-span-3">
               <div className="space-y-6 text-xs leading-relaxed text-gray-800">
                 <p>
-                  I grew up in a small coastal town where the rhythm of the
-                  waves was as familiar as my own heartbeat. My earliest
-                  memories are tinged with the scent of salt water and the
-                  feeling of sand between my toes. It was an idyllic childhood
-                  in many ways — the kind that forms a foundation of security
-                  and wonder that stays with you long after you've left home.
+                  I grew up in a city located near China. My earliest memories
+                  are of long summer days spent exploring the nature since I
+                  live in a remote region of the city. It is also where I
+                  learned to appreciate the beauty of simplicity and the power
+                  of imagination. I would spend hours wandering the woods,
+                  creating elaborate stories in my mind.
                 </p>
                 <p>
                   My parents were both educators, and our home was filled with
@@ -108,14 +108,14 @@ export default function StoryPage() {
                       Location
                     </p>
                     <p className="mt-1 text-xs text-gray-900">
-                      Coastal Town, Pacific Northwest
+                      Lashio, Shan State
                     </p>
                   </div>
                   <div>
                     <p className="text-[10px] uppercase tracking-[0.2em] text-gray-500">
                       Period
                     </p>
-                    <p className="mt-1 text-xs text-gray-900">1990 — 2003</p>
+                    <p className="mt-1 text-xs text-gray-900">2003 — 2010</p>
                   </div>
                   <div>
                     <p className="text-[10px] uppercase tracking-[0.2em] text-gray-500">

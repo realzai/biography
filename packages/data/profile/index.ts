@@ -12,7 +12,6 @@ const profile = {
   about: "Turning ideas into products",
   summary:
     "I am a software engineer who loves to build scalable web and cloud solutions. ",
-  // "I am a software engineer who loves to build scalable web and cloud solutions. I am also a co-founder of a startup that creates floorplans with diffusion models, co-founder of BMC (Burmese Machine Learning Community), and a lead contributor of a non-profit education startup (StudyCrew).",
   avatar: images.midnight,
   website: "https://www.kingzai.com",
   email: "zaibutcooler@icloud.com",
@@ -22,6 +21,9 @@ const profile = {
     x: "https://x.com/zaibutcooler",
     youtube: "https://www.youtube.com/channel/zaibutcooler",
     instagram: "https://www.instagram.com/zaibutcooler",
+    buyMeACofee: "https://www.buymeacoffee.com/realzai",
+    resume: "https://resume.kingzai.com",
+    huggingFace: "https://huggingface.co/zaibutcooler",
   },
 
   experience: `4+ Years`,
