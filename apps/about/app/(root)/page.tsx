@@ -96,8 +96,8 @@ export default function StoryPage() {
             <div className="md:col-span-2">
               <div className="sticky top-8 space-y-8">
                 <Image
-                  src="placeholder.svg"
-                  alt="Childhood"
+                  src="/images/young_me.JPG"
+                  alt="Kid Zai"
                   width={400}
                   height={600}
                   className="h-auto w-full object-cover"
@@ -122,8 +122,8 @@ export default function StoryPage() {
                       Key Memory
                     </p>
                     <p className="mt-1 text-xs italic text-gray-900">
-                      "The first time I wrote code and watched it execute, I
-                      felt like I had discovered magic."
+                      "The first moment when i realized that I am a human being
+                      and not a dog."
                     </p>
                   </div>
                 </div>
@@ -133,14 +133,14 @@ export default function StoryPage() {
         </div>
       </section>
 
-      {/* Chapter 2: The Turning Point */}
+      {/* Chapter 2: The Gifted Child */}
       <section className="py-24">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <p className="text-[10px] uppercase tracking-[0.2em] text-gray-500">
             Chapter 02
           </p>
           <h2 className="mt-2 text-2xl font-normal text-black">
-            The Turning Point
+            The Gifted Child
           </h2>
           <div className="mt-4 h-px w-16 bg-gray-200" />
 
@@ -148,54 +148,42 @@ export default function StoryPage() {
             <div className="md:col-span-3">
               <div className="space-y-6 text-xs leading-relaxed text-gray-800">
                 <p>
-                  College was both a liberation and a challenge. Suddenly, I was
-                  surrounded by people who shared my interests and ambitions.
-                  The computer science department became my second home, and I
-                  found myself part of a community of like-minded individuals
-                  for the first time. There was an intoxicating energy in those
-                  late-night coding sessions, in the collaborative
-                  problem-solving and the shared excitement of building
-                  something new.
+                  I spent most of my high school years as a gifted kid, a label
+                  that came with both privileges and pressures because of my
+                  parents. I never got a chance to play football with my friends
+                  because I'm being isolated physically and mentally. After
+                  school, I always had to go for another class for Chinese and
+                  English. I was the only one who had this life. On the one
+                  hand, I was fortunate to have access to resources and
+                  opportunities which made me who I am today.
                 </p>
                 <p>
-                  But it was also during this time that I faced my first
-                  significant failure. I had applied for a prestigious
-                  internship at a leading tech company, convinced that my
-                  academic performance and passion would be enough to secure the
-                  position. The rejection letter arrived on a rainy Tuesday, and
-                  I remember staring at it for a long time, feeling a mixture of
-                  disappointment and disbelief. It was the first time I had
-                  wanted something so badly and not achieved it, and the
-                  experience shook my confidence in a way I hadn't anticipated.
+                  It didn't end there. For my senior high school, I had to go to
+                  a special school dedicated for the engineers. The reason was
+                  quite funny. I was scared of not being a Civil Engineer if I
+                  go through normal route which is completely normal. I chose to
+                  attend GTHS which is focused on engineering and by doing that,
+                  I will not miss the chance of becoming a Civil Engineer. It
+                  started beautifully with me being the top student in the
+                  entrance exam which got me into the top class.
                 </p>
                 <p>
-                  Looking back, that rejection was one of the most valuable
-                  experiences of my college years. It forced me to reevaluate my
-                  approach, to recognize that technical skills alone weren't
-                  enough in a field that increasingly valued collaboration and
-                  communication. I sought out opportunities to work on
-                  interdisciplinary projects, to translate complex technical
-                  concepts for non-technical audiences, and to develop the soft
-                  skills that would complement my programming abilities.
+                  I killed everyone's expectations by living like a complete
+                  idiot. There's something that i forgot to mention which is
+                  about my parents. They are both teachers in the university and
+                  the teachers who're teaching in that high school were once
+                  their students. For that reason, I was the king and I made a
+                  lot of bad things. I bullied some of the poor kids in that
+                  school (not physically but I still regret for that). I started
+                  smoking and I got all the bad habits that my parents hated.
                 </p>
                 <p>
-                  The following year, I secured an internship at a smaller but
-                  innovative company working on accessibility technologies. It
-                  wasn't the prestigious name I had initially coveted, but the
-                  work was meaningful in a way I hadn't expected. I was part of
-                  a team developing tools that would make digital experiences
-                  more accessible to people with disabilities, and for the first
-                  time, I saw how technology could be a force for inclusion and
-                  empowerment.
-                </p>
-                <p>
-                  This experience marked a turning point in how I thought about
-                  my career and my purpose. Success wasn't just about technical
-                  achievement or recognition; it was about impact and
-                  contribution. This realization would guide my choices in the
-                  years to come, leading me down paths I couldn't have
-                  anticipated but that would ultimately prove more fulfilling
-                  than the straightforward trajectory I had once envisioned.
+                  But it ended well with me meeting good friends and teacher who
+                  fixed me at the final year. I was being pressured in the final
+                  exam cuz the situation is so bad that I got C in my first
+                  semester's test. I was so surprised when i hear that I passed
+                  with good marks after the exam. Then here comes the life
+                  changing moments of my life.
                 </p>
               </div>
             </div>
@@ -221,7 +209,7 @@ export default function StoryPage() {
                     <p className="text-[10px] uppercase tracking-[0.2em] text-gray-500">
                       Period
                     </p>
-                    <p className="mt-1 text-xs text-gray-900">2003 — 2007</p>
+                    <p className="mt-1 text-xs text-gray-900">2010 — 2019</p>
                   </div>
                   <div>
                     <p className="text-[10px] uppercase tracking-[0.2em] text-gray-500">
@@ -245,67 +233,47 @@ export default function StoryPage() {
           <p className="text-[10px] uppercase tracking-[0.2em] text-gray-500">
             Chapter 03
           </p>
-          <h2 className="mt-2 text-2xl font-normal text-black">The Leap</h2>
+          <h2 className="mt-2 text-2xl font-normal text-black">
+            The Calm Before the Storm
+          </h2>
           <div className="mt-4 h-px w-16 bg-gray-200" />
 
           <div className="mt-12 grid gap-12 md:grid-cols-5">
             <div className="md:col-span-3">
               <div className="space-y-6 text-xs leading-relaxed text-gray-800">
                 <p>
-                  After graduation, I followed the expected path, accepting a
-                  position at a well-established tech company. The job offered
-                  stability, good compensation, and the validation of working
-                  for a recognized name in the industry. For the first few
-                  years, I was content, learning from experienced colleagues and
-                  gradually taking on more responsibility. But as time passed, I
-                  began to feel a growing sense of restlessness.
+                  I started my University life in Mandalay which is the second
+                  biggest city in my country. I got the freedom that I always
+                  wanted. The first week was a little lonely but I made a lot of
+                  interesting friends after a week. Guess what? I ended up being
+                  gamer, smoker and alcoholics because of them. But they were
+                  still good people.
                 </p>
                 <p>
-                  The projects I worked on were technically challenging but
-                  often felt disconnected from any meaningful impact. I found
-                  myself in meetings discussing feature optimizations that would
-                  increase engagement by fractions of a percentage point, and I
-                  couldn't help wondering if this was really the best use of my
-                  skills and time. The accessibility work I had done during my
-                  internship had shown me a different kind of satisfaction, one
-                  that came from knowing my work was making a tangible
-                  difference in people's lives.
+                  It was the happiest moment of my life til this day. I was
+                  drunk almost every night and I didn't even study a bit. I went
+                  to short trips that I never thought I would go. I made that
+                  decision in just 1 minute thanks to the friends that I had. I
+                  had my first breakup at that time which is also a story itself
+                  but long story short, I was dumb and she's smart so I just
+                  ended up crying like a bitch.
                 </p>
+                <p></p>
                 <p>
-                  This period of professional disillusionment coincided with
-                  personal changes. I had moved to a new city for the job, far
-                  from family and old friends, and was struggling to build a
-                  community. The long hours at work left little time for
-                  connection or exploration. I found myself in a routine that
-                  was comfortable but uninspiring, both professionally and
-                  personally.
-                </p>
-                <p>
-                  The decision to leave wasn't made in a moment of dramatic
-                  revelation but through a gradual accumulation of small
-                  dissatisfactions and unfulfilled aspirations. When I finally
-                  submitted my resignation, it felt less like a leap into the
-                  unknown and more like a step toward authenticity. I had saved
-                  enough to give myself six months to explore other options, to
-                  reconnect with the sense of purpose I had found during that
-                  formative internship.
-                </p>
-                <p>
-                  Those six months turned into a year of exploration and
-                  reinvention. I freelanced on projects that aligned with my
-                  values, volunteered my technical skills for non-profit
-                  organizations, and even spent three months traveling,
-                  experiencing different cultures and perspectives. It was a
-                  period of both freedom and uncertainty, of financial anxiety
-                  balanced by a growing sense of alignment between my work and
-                  my values.
+                  The calm is over, the exam was postponed because of COVID and
+                  we didn't know what's waiting for us. I came home and
+                  believing that we'll all meet again when the COVID is over.
+                  (Spoiler Alert: it didn't) I had to stop my bad habits at home
+                  because I will get killed if my parents know how I live in
+                  Mandalay. I still had connections with my friends from Uni via
+                  game around that time.
                 </p>
               </div>
             </div>
             <div className="md:col-span-2">
               <div className="sticky top-8 space-y-8">
                 <Image
-                  src="placeholder.svg"
+                  src="/images/naked_drunk.png"
                   alt="Career Transition"
                   width={400}
                   height={600}
@@ -324,7 +292,7 @@ export default function StoryPage() {
                     <p className="text-[10px] uppercase tracking-[0.2em] text-gray-500">
                       Period
                     </p>
-                    <p className="mt-1 text-xs text-gray-900">2007 — 2012</p>
+                    <p className="mt-1 text-xs text-gray-900">2019 — 2020</p>
                   </div>
                   <div>
                     <p className="text-[10px] uppercase tracking-[0.2em] text-gray-500">
@@ -357,64 +325,70 @@ export default function StoryPage() {
             <div className="md:col-span-3">
               <div className="space-y-6 text-xs leading-relaxed text-gray-800">
                 <p>
-                  The path back to stability wasn't linear. After my year of
-                  exploration, I joined a small startup focused on educational
-                  technology. The company's mission — to make quality education
-                  more accessible through technology — resonated deeply with me,
-                  and I was excited by the opportunity to help build something
-                  from the ground up.
+                  I got hit by a storm after storm. First, my girlfriend left
+                  because I was a bad boy it took me almost 3 months to recover.
+                  The pain from that breakup ended after I met with a new girl.
+                  She played an important role for my life. A bigger storm hit
+                  at February 1, 2021 when the military coup happened. I didn't
+                  know it would be that bad. I was so naive that I thought it
+                  would be over in a month or two.
                 </p>
                 <p>
-                  The reality of startup life was both more challenging and more
-                  rewarding than I had anticipated. The hours were long, the
-                  resources limited, and the pressure to deliver was constant.
-                  But there was also an energy and purpose that had been missing
-                  in my previous role. Every feature we shipped had a direct
-                  impact on teachers and students, and the feedback loop was
-                  immediate and gratifying.
+                  I was lucky to have her because she was the one who kept me
+                  sane for the whole year. But I was still a coward and a loser.
+                  She was so rich and I was so poor that I couldn't even afford
+                  expensive gifts. I was so ashamed of myself that I didn't even
+                  want to continue the relationship. I was so scared of losing
+                  her that I chose to break up with her. I was so stupid and I
+                  regretted it after a year.
                 </p>
                 <p>
-                  It was during this time that I also began to find my voice as
-                  a leader. As one of the more experienced developers on a young
-                  team, I found myself naturally taking on mentoring
-                  responsibilities. I discovered that I enjoyed helping others
-                  grow, sharing knowledge, and creating an environment where
-                  everyone felt empowered to contribute. This aspect of the work
-                  — the human element of collaboration and development — became
-                  as fulfilling as the technical challenges.
+                  I didn't have a dream but I knew I needed to become stronger.
+                  I had that fire within me so I started studying Japanese with
+                  a plan to study in Japan. I was so focused on studying that I
+                  passed the exam within a short period of time. That
+                  certificate became useless when I realized that I couldn't
+                  afford to study in Japan. I learnt the most important lesson
+                  after passing the exam. I can become everything that I want to
+                  if I put my heart and effort into it.
                 </p>
                 <p>
-                  The startup journey was not without its setbacks. We faced
-                  funding challenges, had to pivot our product strategy more
-                  than once, and there were moments when the future of the
-                  company seemed uncertain. But these challenges fostered a
-                  resilience and adaptability that would serve me well in the
-                  years to come.
+                  I was lost for a while after that. But I ended up working at
+                  my dad's student's office working as a drafter. I was still
+                  better than 99% of the graduates in my country when it comes
+                  to Civil Engineering related stuffs thanks to my dad. I was
+                  still a dickhead til that day. I was slacking off and which
+                  ended up firing me after a couple of months. But I found the
+                  type of person that I want to be.
                 </p>
                 <p>
-                  After three intense years, the company was acquired by a
-                  larger educational platform. The acquisition was a validation
-                  of our work and vision, but it also marked the end of a
-                  chapter. I stayed through the transition period, helping to
-                  integrate our technology and team, but I knew that the unique
-                  culture and mission-driven focus of our small startup would
-                  inevitably change within the larger corporate structure.
+                  I want to be the next Steve Jobs. You heard that right. That
+                  became my dream and I started to learn programming. I was also
+                  late and my parents thought I was crazy. They invested a lot
+                  of time and effort into me. I had a bright future within that
+                  Civil Engineering career. I have no doubt that I would be a
+                  top tier engineer in my country if I continued that path. I
+                  was so lucky to have these parents that I didn't get slapped
+                  in the face.
                 </p>
                 <p>
-                  As I contemplated my next move, I reflected on what had made
-                  this experience so fulfilling despite its challenges: the
-                  alignment between my work and my values, the opportunity to
-                  mentor and lead, and the tangible impact of our product on
-                  users' lives. These would become my criteria for evaluating
-                  future opportunities, a compass pointing toward purpose rather
-                  than just advancement or security.
+                  After opposing my parents, the real shit happens. It was a
+                  time when everything I did was failing. The electricity, the
+                  internet, everything was against me. I wasn't good enough to
+                  get a job. I failed the job interviews over and over. And for
+                  worse, the girl that i mentioned chose someone how's richer
+                  and more mature over me. It sounds silly when I look back but
+                  at that time, it was a big deal. I was nothing, just an
+                  arrogant loser who's filled with failures. I failed at
+                  education, I chose something that my parents were against and
+                  now I hit what people called the rock bottom.
                 </p>
               </div>
             </div>
             <div className="md:col-span-2">
               <div className="sticky top-8 space-y-8">
                 <Image
-                  src="placeholder.svg"
+                  src="/images/last_peaceful_night.jpg"
                   alt="Startup Life"
                   width={400}
                   height={600}
@@ -431,7 +405,7 @@ export default function StoryPage() {
                     <p className="text-[10px] uppercase tracking-[0.2em] text-gray-500">
                       Period
                     </p>
-                    <p className="mt-1 text-xs text-gray-900">2012 — 2015</p>
+                    <p className="mt-1 text-xs text-gray-900">2020 — 2022</p>
                   </div>
                   <div>
                     <p className="text-[10px] uppercase tracking-[0.2em] text-gray-500">
@@ -455,66 +429,140 @@ export default function StoryPage() {
           <p className="text-[10px] uppercase tracking-[0.2em] text-gray-500">
             Chapter 05
           </p>
-          <h2 className="mt-2 text-2xl font-normal text-black">Present Day</h2>
+          <h2 className="mt-2 text-2xl font-normal text-black">Viva la vida</h2>
           <div className="mt-4 h-px w-16 bg-gray-200" />
 
           <div className="mt-12 grid gap-12 md:grid-cols-5">
             <div className="md:col-span-3">
               <div className="space-y-6 text-xs leading-relaxed text-gray-800">
                 <p>
-                  Today, I find myself in a place I couldn't have predicted when
-                  I started this journey. After the acquisition, I took time to
-                  carefully consider my next steps. I had offers from
-                  established companies that would have provided security and
-                  advancement, but I kept returning to the criteria I had
-                  established: purpose, impact, and the opportunity to grow not
-                  just as a technologist but as a leader.
+                  I spent my darkest hours in a dark small room, hunched over my
+                  8 years old laptop and grind. Failure after failure, I found
+                  another failure that lead me to change my life. I failed at a
+                  job interview, and I posted on reddit that I was willing to
+                  work on a project for free just to get experience. And
+                  thankfully, a guy from Australia messaged me. (While looking
+                  back, I always feel like everything happened as if it is god's
+                  plan.)
                 </p>
                 <p>
-                  This led me to my current role, working with a non-profit
-                  organization that uses technology to address social and
-                  environmental challenges. My position combines technical
-                  leadership with program development, allowing me to leverage
-                  both my engineering skills and my passion for mentoring. I
-                  work with a diverse team of technologists, activists, and
-                  educators, all united by a commitment to using our skills for
-                  positive change.
+                  His name is Nick and we're at the same age. He wants to build
+                  an AI that can redraw floor plans. As someone who learnt for
+                  his entire life drawing floor plans, it was an offer that I
+                  couldn't deny even though I had nothing and paid nothing. We
+                  worked like crazy, we talked and discuss for hours and hours
+                  believing we can build the next Apple. It was 'Archaic' and
+                  we're now 21 years old first time startup founders. Another
+                  life changing event happened after a month.
                 </p>
                 <p>
-                  The work is challenging in new ways. We operate with limited
-                  resources, navigate complex stakeholder relationships, and
-                  tackle problems that don't have easy technical solutions. But
-                  there's a depth of satisfaction in this work that I haven't
-                  found elsewhere — a sense that my professional skills are
-                  serving my personal values rather than the two existing in
-                  separate spheres.
+                  From broke and now became a refugee. The civil war is now
+                  close to our city. I was hearing explosions, airstrikes almost
+                  every night while I was coding that damn website. That was the
+                  proudest thing that I did. Later, the battles became so close
+                  that I was seeing a helicopter shooting rebals and the rebals
+                  shooting back that damn helicopter in broad daylight without
+                  telescope. That lead us to move into the city center
+                  immediately.
                 </p>
                 <p>
-                  Outside of work, I've found a community that nourishes me.
-                  I've put down roots in a city I love, built friendships that
-                  sustain me through challenges, and even found time to
-                  reconnect with old passions like writing and photography. The
-                  balance I sought for so long between professional fulfillment
-                  and personal well-being feels more attainable now, though it
-                  remains a practice rather than an achievement.
+                  It was a cold night, we didn't bring any blankets. I also had
+                  exam from UoPeople that night, and I was also making landing
+                  page for my website. Do you know how a refugee camp looks like
+                  in my country. It was so crowded, the kids are crying, since
+                  it's a hall, it's so noisy and the only time everyone stop
+                  making noise is when kaboom. I should be scared and depressed
+                  but I wasn't. I've changed and I've grown.
                 </p>
                 <p>
-                  Looking back on the path that led me here — the coastal
-                  childhood, the academic achievements and disappointments, the
-                  corporate job that looked right on paper but felt wrong in
-                  practice, the startup rollercoaster, and now this purposeful
-                  work — I see not a linear progression but a series of
-                  explorations, each teaching me something essential about what
-                  matters to me and how I want to contribute to the world.
+                  Luckily, since my parents were teachers, one of their student
+                  invited us to live in their house with us. Since they're rich,
+                  they got plenty of spaces to share. And now I can sleep in
+                  peace except from the explosions. We shipped our website when
+                  I was still in that house and guess what, we had zero users.
+                  The problem was simple, we were late. Our core feature was to
+                  generate property descriptions and openai released their GPT
+                  stores so why would they pay us to generate the same thing.
+                  (We had more interesting features like google map integration
+                  but no one really cared.)
                 </p>
                 <p>
-                  I don't know what the next chapter holds, and I've learned to
-                  be comfortable with that uncertainty. What I do know is that
-                  the journey itself — with all its detours, challenges, and
-                  unexpected discoveries — has been as valuable as any
-                  destination. And I'm grateful for every step of it, even the
-                  difficult ones, that have led me to where I am today.
+                  It was another failure but unlike my previous ones, I was
+                  proud. After a few months living in that house, we made a plan
+                  to leave the city because we knew it will get closer again. We
+                  took debt and we plan to move to a peaceful city. While
+                  planning, another storms hits. Junta made a law that everyone
+                  at my age will have to serve the military. But since it won't
+                  affect immediately, we took the risk and moved. I started a
+                  new life there for some reason, I was listening "viva la vida"
+                  from coldpay on the car and I can never forget that.
                 </p>
+                <p>
+                  I still worked on my startup for a few months and later we
+                  both took a break peacefully accepting that we were
+                  inexperienced. I got nothing to do except from working on my
+                  own projects. I was still making mistakes but these are not
+                  stupid mistakes anymore. Tbh I was lost around that time. I
+                  didn't know what's waiting for me and I didn't know what to
+                  do. I posted stuffs on reddit asking help for my country's
+                  situation and met a guy named hamburger_spaceship. That dude
+                  turns out to be a girl. And thanks to her, I got a job at
+                  "carching" which is a Malaysian startup but this time, I got
+                  paid around 160 USD. Then another chapter begins.
+                </p>
+              </div>
+            </div>
+            <div className="md:col-span-2">
+              <div className="sticky top-8 space-y-8">
+                <Image
+                  src="/images/refugee.png"
+                  alt="Present Day"
+                  width={400}
+                  height={600}
+                  className="h-auto w-full object-cover"
+                />
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-gray-500">
+                      Location
+                    </p>
+                    <p className="mt-1 text-xs text-gray-900">New York, NY</p>
+                  </div>
+                  <div>
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-gray-500">
+                      Period
+                    </p>
+                    <p className="mt-1 text-xs text-gray-900">2022 — 2024</p>
+                  </div>
+                  <div>
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-gray-500">
+                      Philosophy
+                    </p>
+                    <p className="mt-1 text-xs italic text-gray-900">
+                      "The journey is not about finding your one true purpose,
+                      but about creating a life that allows you to express your
+                      many purposes."
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#f9f9f9] py-24">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <p className="text-[10px] uppercase tracking-[0.2em] text-gray-500">
+            Chapter 06
+          </p>
+          <h2 className="mt-2 text-2xl font-normal text-black">Present day</h2>
+          <div className="mt-4 h-px w-16 bg-gray-200" />
+
+          <div className="mt-12 grid gap-12 md:grid-cols-5">
+            <div className="md:col-span-3">
+              <div className="space-y-6 text-xs leading-relaxed text-gray-800">
+                <p></p>
               </div>
             </div>
             <div className="md:col-span-2">
