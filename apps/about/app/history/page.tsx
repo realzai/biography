@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import profile from "@repo/data/profile";
+import works from "@repo/data/profile/works";
+import education from "@repo/data/profile/education";
+import projects from "@repo/data/profile/projects";
 
 export default function HistoryPage() {
   return (
@@ -102,52 +105,15 @@ export default function HistoryPage() {
           </div>
 
           <div className="mx-auto mt-16 max-w-4xl">
-            {[
-              {
-                period: "2020 — Present",
-                role: "Independent Developer & Designer",
-                company: "Freelance",
-                description:
-                  "Working directly with clients to create bespoke websites and applications. Responsible for the entire process from concept to deployment, including design, development, and ongoing maintenance.",
-                projects: [
-                  "Redesigned e-commerce platform for fashion retailer, increasing conversion by 35%",
-                  "Built custom portfolio site for award-winning photographer",
-                  "Developed web application for financial services startup",
-                ],
-              },
-              {
-                period: "2018 — 2020",
-                role: "Senior Frontend Developer",
-                company: "Digital Craft Agency",
-                description:
-                  "Led frontend development for client projects, collaborating with designers and backend developers to create cohesive digital experiences. Mentored junior developers and established coding standards.",
-                projects: [
-                  "Led development of interactive museum exhibition website",
-                  "Architected component library used across multiple client projects",
-                  "Optimized site performance, reducing load times by 40%",
-                ],
-              },
-              {
-                period: "2015 — 2018",
-                role: "UI Developer",
-                company: "TechStart Inc.",
-                description:
-                  "Collaborated with UX designers to implement responsive interfaces for web applications. Focused on creating accessible, performant user interfaces using modern frontend technologies.",
-                projects: [
-                  "Implemented design system across product suite",
-                  "Built interactive data visualization dashboard",
-                  "Developed mobile-first responsive layouts for core products",
-                ],
-              },
-            ].map((experience, index) => (
+            {works.map((experience, index) => (
               <div key={index} className="group border-t border-gray-200 py-12">
                 <div className="flex flex-col md:flex-row md:items-baseline">
                   <p className="text-xs text-gray-400 md:w-1/4">
-                    {experience.period}
+                    {experience.start} - {experience.end}
                   </p>
                   <div className="mt-4 md:mt-0 md:w-3/4">
                     <h3 className="text-sm font-normal text-black">
-                      {experience.role}
+                      {experience.title}
                     </h3>
                     <p className="text-xs text-gray-500">
                       {experience.company}
@@ -192,48 +158,21 @@ export default function HistoryPage() {
             </h2>
 
             <div className="mt-16 space-y-12">
-              {[
-                {
-                  period: "2011 — 2015",
-                  degree: "B.S. Computer Science, Minor in Design",
-                  institution: "New York University",
-                  description:
-                    "Focused on human-computer interaction and web technologies. Completed thesis on responsive design patterns for complex interfaces.",
-                  courses: [
-                    "Advanced Web Development",
-                    "User Interface Design",
-                    "Data Structures & Algorithms",
-                    "Design Thinking",
-                  ],
-                },
-                {
-                  period: "2019",
-                  degree: "UX Design Certification",
-                  institution: "Nielsen Norman Group",
-                  description:
-                    "Comprehensive certification program covering user research, information architecture, and interaction design principles.",
-                  courses: [
-                    "Research Methods",
-                    "Information Architecture",
-                    "Interaction Design",
-                    "Mobile UX",
-                  ],
-                },
-              ].map((education, index) => (
+              {education.map((education, index) => (
                 <div
                   key={index}
                   className="group border-t border-gray-200 py-12"
                 >
                   <div className="flex flex-col md:flex-row md:items-baseline">
                     <p className="text-xs text-gray-400 md:w-1/4">
-                      {education.period}
+                      {education.start} - {education.end}
                     </p>
                     <div className="mt-4 md:mt-0 md:w-3/4">
                       <h3 className="text-sm font-normal text-black">
                         {education.degree}
                       </h3>
                       <p className="text-xs text-gray-500">
-                        {education.institution}
+                        {education.school}
                       </p>
                       <p className="mt-4 text-xs leading-relaxed text-gray-600">
                         {education.description}
@@ -410,50 +349,7 @@ export default function HistoryPage() {
             </h2>
 
             <div className="mt-16 grid gap-16 md:grid-cols-2 ">
-              {[
-                {
-                  title: "Minimal E-Commerce Platform",
-                  category: "Web Development",
-                  image: "/placeholder.svg",
-                  description:
-                    "A custom e-commerce solution for a boutique fashion brand, featuring a minimalist design and seamless checkout experience.",
-                  technologies: [
-                    "Next.js",
-                    "Tailwind CSS",
-                    "Stripe",
-                    "Sanity CMS",
-                  ],
-                },
-                {
-                  title: "Financial Dashboard",
-                  category: "UI/UX Design & Development",
-                  image: "/placeholder.svg",
-                  description:
-                    "An interactive dashboard for financial data visualization, with real-time updates and customizable views.",
-                  technologies: ["React", "D3.js", "TypeScript", "Firebase"],
-                },
-                {
-                  title: "Photography Portfolio",
-                  category: "Web Design",
-                  image: "/placeholder.svg",
-                  description:
-                    "A minimalist portfolio site for a professional photographer, with a focus on image presentation and performance.",
-                  technologies: [
-                    "Gatsby",
-                    "GraphQL",
-                    "Framer Motion",
-                    "Netlify",
-                  ],
-                },
-                {
-                  title: "Health & Wellness App",
-                  category: "Mobile Development",
-                  image: "/placeholder.svg",
-                  description:
-                    "A mobile application for tracking health metrics and wellness activities, with personalized recommendations.",
-                  technologies: ["React Native", "Redux", "Node.js", "MongoDB"],
-                },
-              ].map((project, index) => (
+              {projects.map((project, index) => (
                 <div key={index} className="group">
                   <div className="overflow-hidden">
                     <Image
@@ -475,7 +371,7 @@ export default function HistoryPage() {
                       {project.description}
                     </p>
                     <div className="mt-4 flex flex-wrap gap-2">
-                      {project.technologies.map((tech, techIndex) => (
+                      {project.techStack.map((tech, techIndex) => (
                         <span
                           key={techIndex}
                           className="inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] text-gray-600"
@@ -503,6 +399,7 @@ export default function HistoryPage() {
             <h2 className="mt-16 text-xl font-normal">Client Feedback</h2>
 
             <div className="mt-16 space-y-16">
+              {/*TODO: Ask people for testimonials and add from testimonials.ts*/}
               {[
                 {
                   quote:

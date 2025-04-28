@@ -3,6 +3,7 @@ import { Project } from "./types";
 const BUREMSE_GPT: Project = {
   projectId: "burmese-gpt",
   title: "Burmese-GPT",
+  image: "/placeholder.svg",
   pin: true,
   techStack: ["python", "llms", "pytorch", "generative-ai", "open-sourced"],
   description:
