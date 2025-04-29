@@ -4,6 +4,8 @@ import profile from "@repo/data/profile";
 import works from "@repo/data/profile/works";
 import education from "@repo/data/profile/education";
 import projects from "@repo/data/profile/projects";
+import { Button } from "@repo/ui/components/ui/button";
+import React from "react";
 
 export default function HistoryPage() {
   return (
@@ -21,32 +23,47 @@ export default function HistoryPage() {
               <div>
                 <h2 className="text-xl font-normal text-black">My Story</h2>
                 <p className="mt-6 text-xs leading-relaxed text-gray-600">
-                  I've always been fascinated by the intersection of technology
-                  and design. My journey began in 2015 when I built my first
-                  website, and I've been hooked ever since. What started as a
-                  curiosity has evolved into a passion for creating digital
-                  experiences that are both beautiful and functional.
+                  My journey into technology started with curiosity and a dream.
+                  Growing up in Myanmar, I was always drawn to how things
+                  work—especially in the digital world. I built my first app as
+                  a teenager, and since then, I've been passionate about
+                  creating software that makes life simpler, smarter, and more
+                  connected.
                 </p>
                 <p className="mt-4 text-xs leading-relaxed text-gray-600">
-                  After completing my degree in Computer Science with a minor in
-                  Design, I worked at several agencies before going independent
-                  in 2020. This journey has allowed me to work with clients
-                  ranging from startups to established brands, each project
-                  teaching me something new about the craft of digital design
-                  and development.
+                  After completing my Computer Science degree , I am now
+                  planning to pursue a master's degree. During my studies, I
+                  explored a wide range of tools and frameworks—from Ruby on
+                  Rails and React and Flutter to AI technologies. Alongside my
+                  academic work, I led and contributed to projects that aim to
+                  solve real problems.
                 </p>
                 <p className="mt-4 text-xs leading-relaxed text-gray-600">
-                  My approach combines technical precision with aesthetic
-                  minimalism. I believe that the best digital experiences are
-                  those that feel intuitive and get out of the user's way,
-                  allowing content and functionality to take center stage.
+                  I believe we can make the world a better place through
+                  technology and innovation. From building great products to
+                  creating solutions that address global challenges like world
+                  hunger and peace, I aspire to contribute meaningfully one day.
+                  I am excited to connect with like-minded individuals and
+                  organizations that share my vision of leveraging technology
+                  for the greater good.
                 </p>
+
+                <div className={"mt-5 "}>
+                  <Link href={"/story"}>
+                    <Button className="group h-10 border border-black bg-black px-6 text-[10px] font-normal uppercase tracking-[0.2em] text-white transition-all hover:bg-white hover:text-black">
+                      Know more
+                      <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1">
+                        →
+                      </span>
+                    </Button>
+                  </Link>
+                </div>
               </div>
 
               <div>
                 <Image
-                  src="/placeholder.svg"
-                  alt="Alex Morgan"
+                  src="https://5dtle1ixev.ufs.sh/f/NVoH0HnelgtLFSA1ZSnozrHKMLJ42PFAc6tv0IOwpglBkWq1"
+                  alt="Sai Ye Yint Aung"
                   width={500}
                   height={600}
                   className="h-auto w-full object-cover"

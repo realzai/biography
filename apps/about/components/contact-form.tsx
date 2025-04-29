@@ -16,6 +16,8 @@ import {
 } from "@repo/ui/components/ui/form";
 import { Input } from "@repo/ui/components/ui/input";
 import { Textarea } from "@repo/ui/components/ui/textarea";
+import api from "~/lib/api";
+import { toast } from "sonner";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -30,7 +32,6 @@ const formSchema = z.object({
 });
 
 export const ContactForm: React.FC = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [focused, setFocused] = useState<string | null>(null);
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -43,26 +44,19 @@ export const ContactForm: React.FC = () => {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsSubmitting(true);
-
     try {
-      // This would be replaced with your actual form submission logic
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-
-      // toast({
-      //   title: "Message sent",
-      //   description: "We'll get back to you as soon as possible.",
-      // });
-
-      form.reset();
+      const response = await api.post("/api/contact", values);
+      if (response.status === 200) {
+        toast.success(response.data.message);
+        form.reset();
+      }
     } catch (error) {
-      // toast({
-      //   title: "Something went wrong",
-      //   description: "Your message couldn't be sent. Please try again.",
-      //   variant: "destructive",
-      // });
-    } finally {
-      setIsSubmitting(false);
+      console.error("[ERROR]", error);
+      if (error instanceof Error) {
+        toast.error(error.message);
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
     }
   }
 
@@ -161,10 +155,10 @@ export const ContactForm: React.FC = () => {
         <div className="pt-6">
           <Button
             type="submit"
-            disabled={isSubmitting}
+            disabled={form.formState.isLoading}
             className="group h-10 border border-black bg-black px-6 text-[10px] font-normal uppercase tracking-[0.2em] text-white transition-all hover:bg-white hover:text-black"
           >
-            {isSubmitting ? "Sending..." : "Send Message"}
+            {form.formState.isLoading ? "Sending..." : "Send Message"}
             <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1">
               →
             </span>

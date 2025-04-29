@@ -1,6 +1,7 @@
 import { ContactForm } from "~/components/contact-form";
 import { Metadata } from "next";
 import profile from "@repo/data/profile";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Contact me",
@@ -61,27 +62,27 @@ export default function ContactPage() {
 
                   <div className="pt-10">
                     <div className="flex space-x-4">
-                      <a href="#" className="group">
+                      <Link href={profile.urls.youtube} className="group">
                         <div className="flex h-8 w-8 items-center justify-center border border-gray-800 transition-colors duration-300 group-hover:border-white">
                           <span className="text-xs text-gray-400 transition-colors duration-300 group-hover:text-white">
                             YT
                           </span>
                         </div>
-                      </a>
-                      <a href="#" className="group">
+                      </Link>
+                      <Link href={profile.urls.github} className="group">
                         <div className="flex h-8 w-8 items-center justify-center border border-gray-800 transition-colors duration-300 group-hover:border-white">
                           <span className="text-xs text-gray-400 transition-colors duration-300 group-hover:text-white">
                             GH
                           </span>
                         </div>
-                      </a>
-                      <a href="#" className="group">
+                      </Link>
+                      <Link href={profile.urls.instagram} className="group">
                         <div className="flex h-8 w-8 items-center justify-center border border-gray-800 transition-colors duration-300 group-hover:border-white">
                           <span className="text-xs text-gray-400 transition-colors duration-300 group-hover:text-white">
                             IG
                           </span>
                         </div>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

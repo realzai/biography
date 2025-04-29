@@ -11,7 +11,7 @@ const profile = {
   locationLink: "https://www.google.com/maps/place/Taunggyi",
   about: "Turning ideas into products",
   summary:
-    "I am a software engineer who loves to build scalable web and cloud solutions. ",
+    "I am a software engineer who loves to solve real world problems with technology. I have a passion for building products that make people's lives easier and more enjoyable. I am always looking for new challenges and opportunities to learn and grow.",
   avatar: images.midnight,
   website: "https://www.kingzai.com",
   email: "zaibutcooler@icloud.com",
@@ -26,7 +26,7 @@ const profile = {
     huggingFace: "https://huggingface.co/zaibutcooler",
   },
 
-  experience: `4+ Years`,
+  experience: `${new Date().getFullYear() - 2021}+ Years`,
 
   copyright: `© ${new Date().getFullYear()} Sai Ye Yint Aung. All rights reserved.`,
 };
