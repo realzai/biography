@@ -5,6 +5,7 @@ import { Container } from "@repo/ui/components/ui/container";
 import { buttonVariants } from "@repo/ui/components/ui/button";
 import Link from "next/link";
 import { siteConfig } from "@repo/data/site";
+import { ProfileImage } from "~/components/profile-image";
 
 export default function Page() {
   return (
@@ -19,7 +20,6 @@ export default function Page() {
           <p className="max-w-lg text-base">
             I believe technology should serve humanity. My goal is to create
             products that make a difference and bring good things to the world.
-
             {/*テクノロジーが人々のために役立つものであるべきだと信じています。世界に良い変化をもたらす製品を作ることが私の使命です。*/}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:justify-start">
@@ -41,7 +41,7 @@ export default function Page() {
         </article>
 
         <figure className="relative h-[300px] w-[300px] sm:h-[424px] sm:w-[424px] rounded-lg overflow-hidden bg-primary">
-          {/*<Image src={"/me.jpeg"} alt={"Zai"} layout={"fill"} objectFit={"cover"} />*/}
+          <ProfileImage />
         </figure>
       </Container>
       <Footer />

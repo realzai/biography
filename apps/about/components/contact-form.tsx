@@ -1,59 +1,169 @@
-"use client"
+"use client";
 
-import React from "react";
-import { z } from "zod";
-import { Form, FormField, FormItem } from "@repo/ui/components/ui/form";
-import { useForm, } from "react-hook-form";
+import React, { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Input } from "@repo/ui/components/ui/input";
-import { Button } from "@repo/ui/components/ui/button";
-import {notifyAndSave} from "~/app/contact/actions";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
-const schema = z.object({
-  email: z.string().email(),
-  content: z.string().min(10),
+import { Button } from "@repo/ui/components/ui/button";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@repo/ui/components/ui/form";
+import { Input } from "@repo/ui/components/ui/input";
+import { Textarea } from "@repo/ui/components/ui/textarea";
+import api from "~/lib/api";
+import { toast } from "sonner";
+
+const formSchema = z.object({
+  name: z.string().min(2, {
+    message: "Name must be at least 2 characters.",
+  }),
+  email: z.string().email({
+    message: "Please enter a valid email address.",
+  }),
+  message: z.string().min(10, {
+    message: "Message must be at least 10 characters.",
+  }),
 });
 
-export type ContactFormType = z.infer<typeof schema>;
-
 export const ContactForm: React.FC = () => {
-  const form = useForm<ContactFormType>({
-    resolver: zodResolver(schema),
+  const [focused, setFocused] = useState<string | null>(null);
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
   });
 
-  const onSubmit = async (data: ContactFormType) => {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      const response = await notifyAndSave(data);
-
-    }catch (e){
-      console.log("ERROR ",e)
+      const response = await api.post("/api/contact", values);
+      if (response.status === 200) {
+        toast.success(response.data.message);
+        form.reset();
+      }
+    } catch (error) {
+      console.error("[ERROR]", error);
+      if (error instanceof Error) {
+        toast.error(error.message);
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
     }
-  };
+  }
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)}>
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="space-y-8 font-mono"
+      >
+        <div className="space-y-2">
+          <p className="text-[10px] uppercase tracking-[0.2em] text-gray-500">
+            01 / Your details
+          </p>
+          <div className="h-px w-16 bg-gray-200" />
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <FormField
+            control={form.control}
+            name="name"
+            render={({ field }) => (
+              <FormItem className="space-y-1">
+                <FormLabel className="text-[10px] uppercase tracking-[0.2em] text-gray-500">
+                  Name
+                </FormLabel>
+                <FormControl>
+                  <Input
+                    {...field}
+                    onFocus={() => setFocused("name")}
+                    onBlur={() => setFocused(null)}
+                    className={`border-0 border-b border-gray-200 bg-transparent px-0 py-2 text-xs focus-visible:ring-0 ${
+                      focused === "name" ? "border-black" : ""
+                    }`}
+                  />
+                </FormControl>
+                <FormMessage className="text-[10px]" />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem className="space-y-1">
+                <FormLabel className="text-[10px] uppercase tracking-[0.2em] text-gray-500">
+                  Email
+                </FormLabel>
+                <FormControl>
+                  <Input
+                    type="email"
+                    {...field}
+                    onFocus={() => setFocused("email")}
+                    onBlur={() => setFocused(null)}
+                    className={`border-0 border-b border-gray-200 bg-transparent px-0 py-2 text-xs focus-visible:ring-0 ${
+                      focused === "email" ? "border-black" : ""
+                    }`}
+                  />
+                </FormControl>
+                <FormMessage className="text-[10px]" />
+              </FormItem>
+            )}
+          />
+        </div>
+
+        <div className="space-y-2 pt-4">
+          <p className="text-[10px] uppercase tracking-[0.2em] text-gray-500">
+            02 / Your message
+          </p>
+          <div className="h-px w-16 bg-gray-200" />
+        </div>
+
         <FormField
-          name={"email"}
           control={form.control}
+          name="message"
           render={({ field }) => (
-            <FormItem>
-              <Input {...field} placeholder={"Email"} />
+            <FormItem className="space-y-1">
+              <FormLabel className="text-[10px] uppercase tracking-[0.2em] text-gray-500">
+                Message
+              </FormLabel>
+              <FormControl>
+                <Textarea
+                  {...field}
+                  onFocus={() => setFocused("message")}
+                  onBlur={() => setFocused(null)}
+                  className={`min-h-[120px] resize-none border-0 border-b border-gray-200 bg-transparent px-0 py-2 text-xs focus-visible:ring-0 ${
+                    focused === "message" ? "border-black" : ""
+                  }`}
+                />
+              </FormControl>
+              <FormMessage className="text-[10px]" />
             </FormItem>
           )}
         />
 
-        <FormField
-          name={"content"}
-          control={form.control}
-          render={({ field }) => (
-            <FormItem>
-              <Input {...field} placeholder={"Content"} />
-            </FormItem>
-          )}
-        />
-
-        <Button type={"submit"}>Submit</Button>
+        <div className="pt-6">
+          <Button
+            type="submit"
+            disabled={form.formState.isLoading}
+            className="group h-10 border border-black bg-black px-6 text-[10px] font-normal uppercase tracking-[0.2em] text-white transition-all hover:bg-white hover:text-black"
+          >
+            {form.formState.isLoading ? "Sending..." : "Send Message"}
+            <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1">
+              →
+            </span>
+          </Button>
+        </div>
       </form>
     </Form>
   );

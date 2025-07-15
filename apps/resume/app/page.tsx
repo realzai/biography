@@ -146,10 +146,12 @@ export default function Page() {
                       )}
                     </CardTitle>
                     <div className="hidden font-mono text-xs underline print:visible">
-                      {project.links[0] ? (project.links[0]).href
-                        .replace("https://", "")
-                        .replace("www.", "")
-                        .replace("/", "") : null}
+                      {project.links[0]
+                        ? project.links[0].href
+                            .replace("https://", "")
+                            .replace("www.", "")
+                            .replace("/", "")
+                        : null}
                     </div>
                     <CardDescription className="font-mono text-xs">
                       {project.description}
@@ -251,7 +253,16 @@ export default function Page() {
           <h2 className="text-xl font-bold">Skills</h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.skills.map((skill) => {
-              return <Badge className={"bg-foreground text-background"} key={skill}>{skill}</Badge>;
+              return (
+                <Badge
+                  className={
+                    "bg-foreground text-background hover:bg-foreground/70"
+                  }
+                  key={skill}
+                >
+                  {skill}
+                </Badge>
+              );
             })}
           </div>
         </Section>

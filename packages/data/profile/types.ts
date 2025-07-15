@@ -1,22 +1,15 @@
-type ContentLabel = 'text' | 'video' | 'image' | 'code';
+type ContentLabel = "text" | "video" | "image" | "code";
 
-type ProjectStatus = 'In Progress' | 'Finished';
-
-type ProjectCategory =
-  | 'website'
-  | 'mobile'
-  | 'generative-ai'
-  | 'machine learning'
-  | 'deeplearning'
-  | 'dev-tool';
+type ProjectStatus = "In Progress" | "Finished";
 
 export interface Project {
   projectId: string;
   title: string;
   duration: string;
+  image: string;
   status: ProjectStatus;
   techStack: string[];
-  category: ProjectCategory;
+  category: string;
   description: string;
   startedDate: string;
   links: {

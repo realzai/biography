@@ -4,6 +4,6 @@ export const siteConfig = {
   aboutUrl: "https://about.kingzai.com",
   galleryUrl: "https://about.kingzai.com/gallery",
   contactUrl: "https://about.kingzai.com/contact",
-  projectsUrl: "https://github.com/zaibutcooler",
+  projectsUrl: "https://github.com/realzai?tab=repositories",
   rootUrl: "https://kingzai.com",
 };
