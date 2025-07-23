@@ -1,9 +1,9 @@
 const testimonials = [
   {
     author: "Jacob Heldt",
-    role: "Founder of Studycrew",
+    role: "Founder of StudyCrew",
     quote:
-      "Alex transformed our vision into a digital reality that exceeded our expectations. The attention to detail and technical expertise were evident throughout the project.",
+      "Zai shared great ideas on improving the codebase. In addition to his technical expertise, his communication skills helped maintain a healthy and motivated attitude among the open-source community.",
   },
 ];
 

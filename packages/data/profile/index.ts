@@ -20,7 +20,7 @@ const profile = {
     linkedIn: "https://www.linkedin.com/in/saiyeyintaung/",
     x: "https://x.com/zaibutcooler",
     youtube: "https://www.youtube.com/channel/zaibutcooler",
-    instagram: "https://www.instagram.com/zaibutcooler",
+    instagram: "https://www.instagram.com/notrealzai",
     buyMeACofee: "https://www.buymeacoffee.com/realzai",
     resume: "https://resume.kingzai.com",
     huggingFace: "https://huggingface.co/zaibutcooler",
