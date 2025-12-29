@@ -1,9 +1,10 @@
 import { Footer } from "~/components/footer";
 import { Navbar } from "~/components/navbar";
-import { Code2, Globe, Rocket, Shield, Users, Zap } from "lucide-react";
 import Hero from "~/sections/hero";
-import Features from "~/sections/features";
 import CTA from "~/sections/cta";
+import Highlights from "~/sections/highlights";
+import Showcase from "~/sections/showcase";
+import Credentials from "~/sections/credentials";
 
 export default function Page() {
   return (
@@ -11,7 +12,9 @@ export default function Page() {
       <Navbar />
 
       <Hero />
-      <Features />
+      <Credentials />
+      <Showcase />
+      <Highlights />
       <CTA />
 
       <Footer />
