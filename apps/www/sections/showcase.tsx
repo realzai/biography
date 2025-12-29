@@ -29,58 +29,58 @@ type IntroText = {
 const introTexts: IntroText[] = [
   {
     milestone: 0,
-    text: "Hey there! I'm Zai, a software developer.",
+    text: "Oh hey, you're actually playing! I'm Zai, nice to meet you.",
     distance: 6,
   },
   {
     milestone: 30,
-    text: "I build products that solve real problems and make people's lives better.",
-    distance: 8,
+    text: "So what do I do? I'm a developer and an entrepreneur.",
+    distance: 7,
   },
   {
     milestone: 60,
-    text: "Passionate about AI, machine learning, and creating intuitive user experiences.",
-    distance: 9,
+    text: "Mostly into AI and machine learning these days. Fascinating stuff.",
+    distance: 7,
   },
   {
     milestone: 100,
-    text: "Currently based in Tokyo, Japan.",
-    distance: 4,
-  },
-  {
-    milestone: 130,
-    text: "I believe technology should serve humanity and bring positive change to the world.",
-    distance: 9,
-  },
-  {
-    milestone: 170,
-    text: "Open source enthusiast and community contributor.",
+    text: "I'm currently based in Chiang Mai, Thailand. Beautiful place.",
     distance: 6,
   },
   {
+    milestone: 130,
+    text: "What drives me? Making tech that actually helps people.",
+    distance: 6,
+  },
+  {
+    milestone: 170,
+    text: "I love open source. There's something special about building together.",
+    distance: 7,
+  },
+  {
     milestone: 210,
-    text: "Always learning, always building.",
-    distance: 5,
+    text: "When I'm not coding, I'm probably learning something new.",
+    distance: 6,
   },
   {
     milestone: 250,
-    text: "Let's create something amazing together!",
+    text: "I'm always open to new opportunities and collaborations.",
     distance: 6,
   },
   {
     milestone: 300,
-    text: "You're doing great! Keep going!",
-    distance: 4,
+    text: "So if you have any, I'm happy to be a part of it.",
+    distance: 5,
   },
   {
     milestone: 400,
-    text: "Impressive! You're a natural!",
-    distance: 4,
+    text: "At this point, we're basically friends. Hi friend.",
+    distance: 5,
   },
   {
     milestone: 500,
-    text: "Legend status achieved!",
-    distance: 3,
+    text: "You absolute legend. I'm really happy to have you here. Thanks for your time.",
+    distance: 4,
   },
 ];
 
@@ -102,7 +102,7 @@ export default function Showcase() {
     gameSpeed: GAME_SPEED_INITIAL,
     score: 0,
     animationId: 0,
-    health: 3,
+    health: 5,
     invincible: false,
     lastObstacleX: 0,
   });
@@ -123,11 +123,11 @@ export default function Showcase() {
     game.obstacles = [];
     game.gameSpeed = GAME_SPEED_INITIAL;
     game.score = 0;
-    game.health = 3;
+    game.health = 5;
     game.invincible = false;
     game.lastObstacleX = 0;
     setScore(0);
-    setHealth(3);
+    setHealth(5);
     setCurrentFact(introTexts[0]);
     setGameState("playing");
   }, []);
@@ -373,7 +373,7 @@ export default function Showcase() {
           <div className="absolute top-0 left-0 right-0 p-4 sm:p-6 z-10 flex items-start justify-between">
             {/* Health - top left */}
             <div className="flex items-center gap-1">
-              {[...Array(3)].map((_, i) => (
+              {[...Array(5)].map((_, i) => (
                 <span
                   key={i}
                   className={`text-lg transition-all duration-300 ${
@@ -398,7 +398,7 @@ export default function Showcase() {
 
           {/* Intro text display - only show when playing */}
           {gameState === "playing" && (
-            <div className="absolute top-32 sm:top-40 left-0 right-0 z-10 flex flex-col items-center text-center px-4">
+            <div className="absolute top-40 sm:top-48 left-0 right-0 z-10 flex flex-col items-center text-center px-4">
               <p className="text-sm sm:text-base text-white/90 font-medium leading-tight max-w-md">
                 {currentFact?.text}
               </p>
