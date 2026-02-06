@@ -14,7 +14,7 @@
     "@vercel/analytics": "^1.5.0",
     "axios": "^1.8.4",
     "lucide-react": "^0.476.0",
-    "next": "14.2.8",
+    "next": "14.2.35",
     "react": "catalog:react18",
     "react-dom": "catalog:react18"
   },
