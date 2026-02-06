@@ -14,8 +14,8 @@
     "@repo/tsconfigs": "workspace:*",
     "@types/node": "catalog:",
     "@types/react": "catalog:react18",
-    "autoprefixer": "^10",
-    "postcss": "^8",
+    "autoprefixer": "catalog:",
+    "postcss": "catalog:",
     "postcss-load-config": "^6",
     "tailwindcss": "catalog:",
     "typescript": "catalog:"

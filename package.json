@@ -1,13 +1,29 @@
 {
-  "name": "turborepo-shadcn-ui",
+  "name": "@kingzai/biography",
   "version": "1.5.1",
   "private": true,
+  "description": "Personal website monorepo powering kingzai.com and its subdomains",
+  "author": "Sai Ye Yint Aung <zaibutcooler@icloud.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/realzai/biography.git"
+  },
+  "keywords": [
+    "monorepo",
+    "turborepo",
+    "nextjs",
+    "portfolio",
+    "personal-website"
+  ],
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "start": "turbo start",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,md}\"",
+    "clean": "turbo clean && rm -rf node_modules .turbo",
     "ui": "pnpm --filter @repo/ui ui"
   },
   "devDependencies": {

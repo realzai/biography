@@ -12,12 +12,27 @@ catalogs:
     '@types/node':
       specifier: ^20
       version: 20.11.6
+    '@vercel/analytics':
+      specifier: ^1.5.0
+      version: 1.5.0
+    autoprefixer:
+      specifier: ^10
+      version: 10.4.19
+    axios:
+      specifier: ^1.8.4
+      version: 1.8.4
     eslint:
       specifier: ^8.57.0
       version: 8.57.0
     lucide-react:
-      specifier: ^0.451.0
-      version: 0.451.0
+      specifier: ^0.487.0
+      version: 0.487.0
+    next:
+      specifier: ^14.2.35
+      version: 14.2.35
+    postcss:
+      specifier: ^8
+      version: 8.4.38
     prettier:
       specifier: ^3.3.3
       version: 3.3.3
@@ -70,16 +85,16 @@ importers:
         specifier: workspace:*
         version: link:../../packages/ui
       '@vercel/analytics':
-        specifier: ^1.5.0
+        specifier: 'catalog:'
         version: 1.5.0(next@14.2.35(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       axios:
-        specifier: ^1.8.4
+        specifier: 'catalog:'
         version: 1.8.4
       lucide-react:
-        specifier: ^0.487.0
+        specifier: 'catalog:'
         version: 0.487.0(react@18.3.1)
       next:
-        specifier: 14.2.35
+        specifier: 'catalog:'
         version: 14.2.35(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-themes:
         specifier: ^0.4.4
@@ -122,13 +137,13 @@ importers:
         specifier: catalog:react18
         version: 18.3.1
       autoprefixer:
-        specifier: ^10
+        specifier: 'catalog:'
         version: 10.4.19(postcss@8.4.38)
       eslint:
         specifier: 'catalog:'
         version: 8.57.0
       postcss:
-        specifier: ^8
+        specifier: 'catalog:'
         version: 8.4.38
       tailwindcss:
         specifier: 'catalog:'
@@ -180,13 +195,13 @@ importers:
         specifier: workspace:*
         version: link:../../packages/ui
       '@vercel/analytics':
-        specifier: ^1.5.0
+        specifier: 'catalog:'
         version: 1.5.0(next@14.2.35(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       lucide-react:
-        specifier: ^0.475.0
-        version: 0.475.0(react@18.3.1)
+        specifier: 'catalog:'
+        version: 0.487.0(react@18.3.1)
       next:
-        specifier: 14.2.35
+        specifier: 'catalog:'
         version: 14.2.35(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
         specifier: catalog:react18
@@ -217,13 +232,13 @@ importers:
         specifier: catalog:react18
         version: 18.3.1
       autoprefixer:
-        specifier: ^10
+        specifier: 'catalog:'
         version: 10.4.19(postcss@8.4.38)
       eslint:
         specifier: 'catalog:'
         version: 8.57.0
       postcss:
-        specifier: ^8
+        specifier: 'catalog:'
         version: 8.4.38
       tailwindcss:
         specifier: 'catalog:'
@@ -241,16 +256,16 @@ importers:
         specifier: workspace:*
         version: link:../../packages/ui
       '@vercel/analytics':
-        specifier: ^1.5.0
+        specifier: 'catalog:'
         version: 1.5.0(next@14.2.35(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       axios:
-        specifier: ^1.8.4
+        specifier: 'catalog:'
         version: 1.8.4
       lucide-react:
-        specifier: ^0.476.0
-        version: 0.476.0(react@18.3.1)
+        specifier: 'catalog:'
+        version: 0.487.0(react@18.3.1)
       next:
-        specifier: 14.2.35
+        specifier: 'catalog:'
         version: 14.2.35(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
         specifier: catalog:react18
@@ -281,13 +296,13 @@ importers:
         specifier: catalog:react18
         version: 18.3.1
       autoprefixer:
-        specifier: ^10
+        specifier: 'catalog:'
         version: 10.4.19(postcss@8.4.38)
       eslint:
         specifier: 'catalog:'
         version: 8.57.0
       postcss:
-        specifier: ^8
+        specifier: 'catalog:'
         version: 8.4.38
       tailwindcss:
         specifier: 'catalog:'
@@ -362,7 +377,7 @@ importers:
         version: 1.0.0(@types/react-dom@18.3.1)(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       lucide-react:
         specifier: 'catalog:'
-        version: 0.451.0(react@18.3.1)
+        version: 0.487.0(react@18.3.1)
       next-themes:
         specifier: ^0.4.4
         version: 0.4.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -401,10 +416,10 @@ importers:
         specifier: catalog:react18
         version: 18.3.11
       autoprefixer:
-        specifier: ^10
+        specifier: 'catalog:'
         version: 10.4.19(postcss@8.4.38)
       postcss:
-        specifier: ^8
+        specifier: 'catalog:'
         version: 8.4.38
       postcss-load-config:
         specifier: ^6
@@ -1471,9 +1486,6 @@ packages:
     resolution: {integrity: sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==}
     engines: {node: '>= 6'}
 
-  caniuse-lite@1.0.30001636:
-    resolution: {integrity: sha512-bMg2vmr8XBsbL6Lr0UHXy/21m84FTxDLWn2FSqMd5PrlbMxwJlQnC2YWYxVgp66PZE+BBNF2jYQUBKCo1FDeZg==}
-
   caniuse-lite@1.0.30001700:
     resolution: {integrity: sha512-2S6XIXwaE7K7erT8dY+kLQcpa5ms63XlRkMkReXjle+kf6c5g38vyMl+Z5y8dSxOFDhcFe+nxnn261PLxBSQsQ==}
 
@@ -2467,21 +2479,6 @@ packages:
 
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
-
-  lucide-react@0.451.0:
-    resolution: {integrity: sha512-OwQ3uljZLp2cerj8sboy5rnhtGTCl9UCJIhT1J85/yOuGVlEH+xaUPR7tvNdddPvmV5M5VLdr7cQuWE3hzA4jw==}
-    peerDependencies:
-      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0-rc
-
-  lucide-react@0.475.0:
-    resolution: {integrity: sha512-NJzvVu1HwFVeZ+Gwq2q00KygM1aBhy/ZrhY9FsAgJtpB+E4R7uxRk9M2iKvHa6/vNxZydIB59htha4c2vvwvVg==}
-    peerDependencies:
-      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
-
-  lucide-react@0.476.0:
-    resolution: {integrity: sha512-x6cLTk8gahdUPje0hSgLN1/MgiJH+Xl90Xoxy9bkPAsMPOUiyRSKR4JCDPGVCEpyqnZXH3exFWNItcvra9WzUQ==}
-    peerDependencies:
-      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
   lucide-react@0.487.0:
     resolution: {integrity: sha512-aKqhOQ+YmFnwq8dWgGjOuLc8V1R9/c/yOd+zDY4+ohsR2Jo05lSGc3WsstYPIzcTpeosN7LoCkLReUUITvaIvw==}
@@ -4452,7 +4449,7 @@ snapshots:
   autoprefixer@10.4.19(postcss@8.4.38):
     dependencies:
       browserslist: 4.23.1
-      caniuse-lite: 1.0.30001636
+      caniuse-lite: 1.0.30001700
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.0.1
@@ -4542,8 +4539,6 @@ snapshots:
   callsites@3.1.0: {}
 
   camelcase-css@2.0.1: {}
-
-  caniuse-lite@1.0.30001636: {}
 
   caniuse-lite@1.0.30001700: {}
 
@@ -5660,18 +5655,6 @@ snapshots:
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
-
-  lucide-react@0.451.0(react@18.3.1):
-    dependencies:
-      react: 18.3.1
-
-  lucide-react@0.475.0(react@18.3.1):
-    dependencies:
-      react: 18.3.1
-
-  lucide-react@0.476.0(react@18.3.1):
-    dependencies:
-      react: 18.3.1
 
   lucide-react@0.487.0(react@18.3.1):
     dependencies:
