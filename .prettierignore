@@ -1,2 +1,36 @@
+# Turbo
 .turbo
 
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Build outputs
+.next
+out
+dist
+build
+*.tsbuildinfo
+
+# Vercel
+.vercel
+
+# Misc
+.DS_Store
+*.pem
+
+# Lockfiles
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Generated files
+next-env.d.ts
+
+# IDE
+.idea
+.vscode
+
+# Env files
+.env*

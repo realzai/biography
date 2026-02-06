@@ -1,6 +1,35 @@
+# Environment files (should use Vercel env vars instead)
 apps/www/.env
 apps/api/.env
 apps/resume/.env
 apps/about/.env
+.env.local
+.env*.local
 
+# Development
+.turbo
+node_modules/.cache
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+
+# Documentation
+README.md
+CLAUDE.md
+*.md
+!apps/*/README.md
 

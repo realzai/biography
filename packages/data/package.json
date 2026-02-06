@@ -2,6 +2,12 @@
   "name": "@repo/data",
   "version": "0.0.0",
   "private": true,
+  "exports": {
+    "./site": "./site.ts",
+    "./profile": "./profile/index.ts",
+    "./profile/*": "./profile/*.ts",
+    "./assets/*": "./assets/*.ts"
+  },
   "devDependencies": {
     "@types/node": "catalog:",
     "typescript": "catalog:"

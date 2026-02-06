@@ -11,7 +11,6 @@
   "dependencies": {
     "@repo/data": "workspace:*",
     "@repo/ui": "workspace:*",
-    "@repo/utils": "workspace:*",
     "@vercel/analytics": "^1.5.0",
     "lucide-react": "^0.475.0",
     "next": "14.2.8",

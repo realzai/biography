@@ -12,7 +12,6 @@
     "@hookform/resolvers": "^4.1.0",
     "@repo/data": "workspace:*",
     "@repo/ui": "workspace:*",
-    "@repo/utils": "workspace:*",
     "@vercel/analytics": "^1.5.0",
     "axios": "^1.8.4",
     "lucide-react": "^0.487.0",

@@ -3,9 +3,12 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@repo/data/*": ["./src/*"]
+      "@repo/data/profile": ["./profile/index.ts"],
+      "@repo/data/profile/*": ["./profile/*"],
+      "@repo/data/site": ["./site.ts"],
+      "@repo/data/assets/*": ["./assets/*"]
     }
   },
-  "include": ["src"],
+  "include": ["profile", "assets", "site.ts"],
   "exclude": ["node_modules"]
 }
