@@ -3,16 +3,10 @@ import { siteConfig } from "@repo/data/site";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [
-      {
-        userAgent: "Googlebot",
-        allow: ["/"],
-      },
-      {
-        userAgent: ["Applebot", "Bingbot"],
-        disallow: ["/"],
-      },
-    ],
+    rules: {
+      userAgent: "*",
+      allow: "/",
+    },
     sitemap: `${siteConfig.productionUrl}/sitemap.xml`,
   };
 }

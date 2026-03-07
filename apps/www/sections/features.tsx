@@ -2,8 +2,8 @@ import { Container } from "@repo/ui/components/ui/container";
 import { buttonVariants } from "@repo/ui/components/ui/button";
 import { Card, CardContent } from "@repo/ui/components/ui/card";
 import Link from "next/link";
-import { siteConfig } from "@repo/data/site";
 import { Code2, Globe, Rocket, Shield, Users, Zap } from "lucide-react";
+import { routes } from "~/lib/routes";
 
 const features = [
   {
@@ -97,7 +97,7 @@ export default function Features() {
 
         <div className="text-center mt-16">
           <Link
-            href={siteConfig.contactUrl}
+            href={routes.contact}
             className={buttonVariants({
               size: "lg",
               className:

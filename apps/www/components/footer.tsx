@@ -12,11 +12,13 @@ const footerLinks = [
 ]
 
 export const Footer: React.FC = () => {
+  const year = new Date().getFullYear();
+
   return (
     <footer className="border-t mt-24" aria-label="Site Footer">
       <Container className="flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0">
         <p className="text-sm font-medium text-center md:text-left">
-          Copyright © 2025 Sai Ye Yint Aung
+          Copyright © {year} Sai Ye Yint Aung
         </p>
         <nav aria-label="Social Media Links">
           <ul className="flex items-center space-x-6">
