@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Container } from "@repo/ui/components/ui/container";
 import { buttonVariants } from "@repo/ui/components/ui/button";
 import Image from "next/image";
-import { routes } from "~/lib/routes";
+import { siteConfig } from "@repo/data/site";
 
 export default function Hero() {
   return (
@@ -19,14 +19,14 @@ export default function Hero() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:justify-start">
           <Link
-            href={routes.about}
+            href={siteConfig.aboutUrl}
             className={buttonVariants({ size: "lg" })}
           >
             About Me
             {/*私について*/}
           </Link>
           <Link
-            href={routes.contact}
+            href={siteConfig.contactUrl}
             className={buttonVariants({ size: "lg", variant: "ghost" })}
           >
             Contact Now

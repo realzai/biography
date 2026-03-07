@@ -7,12 +7,11 @@ import { buttonVariants } from "@repo/ui/components/ui/button";
 import { Logo } from "@repo/ui/components/logo";
 import { MobileNav } from "~/components/mobile-nav";
 import { cn } from "@repo/ui/lib/utils";
-import { routes } from "~/lib/routes";
 
 const links = [
-  { name: "About", href: routes.about },
+  { name: "About", href: siteConfig.aboutUrl },
   { name: "Resume", href: siteConfig.resumeUrl },
-  { name: "Projects", href: routes.projects },
+  { name: "Projects", href: siteConfig.projectsUrl },
 ];
 
 export const Navbar: React.FC = () => (
@@ -49,7 +48,7 @@ export const Navbar: React.FC = () => (
             className={cn(
               buttonVariants({ className: "rounded-full text-xs" }),
             )}
-            href={routes.contact}
+            href={siteConfig.contactUrl}
             aria-label="Contact"
           >
             Contact Me

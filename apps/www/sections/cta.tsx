@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Container } from "@repo/ui/components/ui/container";
 import { buttonVariants } from "@repo/ui/components/ui/button";
 import { Rocket } from "lucide-react";
-import { routes } from "~/lib/routes";
+import { siteConfig } from "@repo/data/site";
 
 export default function CTA() {
   return (
@@ -21,7 +21,7 @@ export default function CTA() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href={routes.contact}
+              href={siteConfig.contactUrl}
               className={buttonVariants({
                 size: "lg",
                 className:
@@ -32,7 +32,7 @@ export default function CTA() {
               <Rocket className="ml-2 h-5 w-5" />
             </Link>
             <Link
-              href={routes.about}
+              href={siteConfig.aboutUrl}
               className={buttonVariants({
                 size: "lg",
                 variant: "secondary",

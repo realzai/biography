@@ -26,7 +26,6 @@ import { Button } from "@repo/ui/components/ui/button";
 import Link from "next/link";
 import { Logo } from "@repo/ui/components/logo";
 import { siteConfig } from "@repo/data/site";
-import { routes } from "~/lib/routes";
 
 interface Navlink {
   label: string;
@@ -36,9 +35,9 @@ interface Navlink {
 }
 
 const navlinks: Navlink[] = [
-  { label: "About", route: routes.about, icon: User },
-  { label: "Contact", route: routes.contact, icon: NotebookPen },
-  { label: "Projects", route: routes.projects, icon: History },
+  { label: "About", route: siteConfig.aboutUrl, icon: User },
+  { label: "Contact", route: siteConfig.contactUrl, icon: NotebookPen },
+  { label: "Projects", route: siteConfig.projectsUrl, icon: History },
   { label: "Resume", route: siteConfig.resumeUrl, icon: ScrollText },
   { label: "Theme", icon: Sun, onClick: () => {} },
   { label: "Language", icon: LanguagesIcon, onClick: () => {} },
