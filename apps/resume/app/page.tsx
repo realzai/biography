@@ -176,6 +176,58 @@ export default function Page() {
           </div>
         </Section>
 
+        <Section>
+          <h2 className="text-xl font-bold">Certifications</h2>
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+            {RESUME_DATA.credentials.map((credential) => {
+              return (
+                <Card key={credential.credentialUrl}>
+                  <CardHeader>
+                    <div className="flex items-center justify-between gap-x-2 text-base">
+                      <h3 className="font-semibold leading-none">
+                        <Link
+                          className="hover:underline"
+                          href={credential.credentialUrl}
+                          target="_blank"
+                        >
+                          {credential.title}
+                        </Link>
+                      </h3>
+                      <div className="text-sm tabular-nums text-gray-500 shrink-0">
+                        {credential.issued}
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="mt-2 text-xs">
+                    {credential.name}
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+        </Section>
+
+        <Section>
+          <h2 className="text-xl font-bold">Education</h2>
+          {RESUME_DATA.education.map((education) => {
+            return (
+              <Card key={education.school}>
+                <CardHeader>
+                  <div className="flex items-center justify-between gap-x-2 text-base">
+                    <h3 className="font-semibold leading-none">
+                      {education.school}
+                    </h3>
+                    <div className="text-sm tabular-nums text-gray-500">
+                      {education.start} - {education.end}
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="mt-2">{education.degree}</CardContent>
+              </Card>
+            );
+          })}
+        </Section>
+
         <Section className="print-force-new-page scroll-mb-16">
           <h2 className="text-xl font-bold">Clients</h2>
           <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3 px-3">
@@ -229,26 +281,6 @@ export default function Page() {
           </div>
         </Section>
 
-        <Section>
-          <h2 className="text-xl font-bold">Education</h2>
-          {RESUME_DATA.education.map((education) => {
-            return (
-              <Card key={education.school}>
-                <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="font-semibold leading-none">
-                      {education.school}
-                    </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
-                      {education.start} - {education.end}
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent className="mt-2">{education.degree}</CardContent>
-              </Card>
-            );
-          })}
-        </Section>
         <Section>
           <h2 className="text-xl font-bold">Skills</h2>
           <div className="flex flex-wrap gap-1">

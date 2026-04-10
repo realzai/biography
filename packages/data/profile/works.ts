@@ -1,11 +1,23 @@
 const works = [
   {
+    company: "VendorSage",
+    link: "https://vendorsage.com",
+    badges: ["Next.js", "TypeScript", "Go", "Kubernetes"],
+    title: "Software Engineer",
+    start: "2025",
+    end: "Today",
+    description:
+      "Building and scaling a procurement intelligence platform that helps organizations make smarter vendor decisions through data-driven insights.",
+    logo: "",
+    projects: [],
+  },
+  {
     company: "Carching",
     link: "https://carching.co",
     badges: ["Next.js", "React.js", "Flutter", "Laravel"],
     title: "Software Engineer",
     start: "2024",
-    end: "Today",
+    end: "2025",
     description:
       "A mobility startup revolutionizing car ownership by turning vehicles into moving brand experiences, blending ambient advertising with data-driven insights to optimize offline marketing and generate passive income for drivers.",
     logo: "",
@@ -32,7 +44,7 @@ const works = [
     company: "Konoike",
     link: "https://www.konoike.co.jp/",
     badges: ["Autocad", "Revit", "Leadership"],
-    title: "Team Lead Architect",
+    title: "Architectural Drafter",
     start: "2021",
     end: "2022",
     description:
