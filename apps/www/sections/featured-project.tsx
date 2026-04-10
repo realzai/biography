@@ -6,41 +6,17 @@ import { siteConfig } from "@repo/data/site";
 import { Github, ArrowUpRight, Folder } from "lucide-react";
 import projects from "@repo/data/profile/projects";
 
-const otherProjects = [
-  {
-    title: "Burmese Wiki Dataset",
-    description: "Curated dataset for Burmese NLP research",
-    tech: ["HuggingFace", "NLP"],
-    link: "https://huggingface.co/datasets/zaibutcooler/wiki-burmese",
-  },
-  {
-    title: "Personal Portfolio",
-    description: "This website - built with Next.js & Tailwind",
-    tech: ["Next.js", "TypeScript"],
-    link: "https://github.com/realzai/biography",
-  },
-  {
-    title: "Premerly",
-    description: "AI-powered platform for real estate agents",
-    tech: ["React", "AI"],
-    link: "https://github.com/realzai",
-  },
-  {
-    title: "ML Experiments",
-    description: "Collection of machine learning notebooks",
-    tech: ["Python", "PyTorch"],
-    link: "https://github.com/realzai",
-  },
-  {
-    title: "Open Source",
-    description: "Various contributions to the community",
-    tech: ["OSS"],
-    link: "https://github.com/realzai",
-  },
-];
+const otherProjects = projects
+  .filter((p) => !p.pin)
+  .map((p) => ({
+    title: p.title,
+    description: p.description,
+    tech: p.techStack.slice(0, 2),
+    link: p.links[0]?.href || "#",
+  }));
 
 export default function FeaturedProject() {
-  const featuredProject = projects[0];
+  const featuredProject = projects.find((p) => p.pin);
 
   if (!featuredProject) return null;
 

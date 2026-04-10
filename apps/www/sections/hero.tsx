@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { Container } from "@repo/ui/components/ui/container";
 import { buttonVariants } from "@repo/ui/components/ui/button";
-import { siteConfig } from "@repo/data/site";
 import Image from "next/image";
+import { siteConfig } from "@repo/data/site";
 
 export default function Hero() {
   return (
@@ -40,7 +40,7 @@ export default function Hero() {
           src={
             "https://5dtle1ixev.ufs.sh/f/NVoH0HnelgtLFSA1ZSnozrHKMLJ42PFAc6tv0IOwpglBkWq1"
           }
-          alt={"Zai"}
+          alt={"Portrait of Sai Ye Yint Aung"}
           fill
           style={{ objectFit: "cover" }}
         />

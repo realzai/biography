@@ -55,16 +55,31 @@ const MobileLinkButton: React.FC<MobileLinkButtonProps> = ({
   route = "#",
   onClick = () => {},
   Icon,
-}) => (
-  <Link
-    href={route}
-    onClick={onClick}
-    className="flex h-16 w-full flex-col items-center justify-center gap-1"
-  >
-    <Icon className="h-5 w-5" />
-    <p className="text-sm">{label}</p>
-  </Link>
-);
+}) => {
+  if (!route || route === "#") {
+    return (
+      <button
+        type="button"
+        onClick={onClick}
+        className="flex h-16 w-full flex-col items-center justify-center gap-1"
+      >
+        <Icon className="h-5 w-5" />
+        <p className="text-sm">{label}</p>
+      </button>
+    );
+  }
+
+  return (
+    <Link
+      href={route}
+      onClick={onClick}
+      className="flex h-16 w-full flex-col items-center justify-center gap-1"
+    >
+      <Icon className="h-5 w-5" />
+      <p className="text-sm">{label}</p>
+    </Link>
+  );
+};
 
 export const MobileNav: React.FC = () => {
   return (

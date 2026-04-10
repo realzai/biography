@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { Container } from "@repo/ui/components/ui/container";
 import { buttonVariants } from "@repo/ui/components/ui/button";
-import { siteConfig } from "@repo/data/site";
 import { Rocket } from "lucide-react";
+import { siteConfig } from "@repo/data/site";
 
 export default function CTA() {
   return (

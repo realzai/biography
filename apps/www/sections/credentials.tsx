@@ -1,31 +1,7 @@
 import { Container } from "@repo/ui/components/ui/container";
-
-const credentials = [
-  {
-    name: "Harvard",
-    type: "Certification",
-  },
-  {
-    name: "Google",
-    type: "Certified",
-  },
-  {
-    name: "MIT",
-    type: "Course",
-  },
-  {
-    name: "Meta",
-    type: "Certified",
-  },
-  {
-    name: "Stanford",
-    type: "Certification",
-  },
-  {
-    name: "AWS",
-    type: "Certified",
-  },
-];
+import Image from "next/image";
+import Link from "next/link";
+import credentials from "@repo/data/profile/credentials";
 
 export default function Credentials() {
   return (
@@ -37,25 +13,55 @@ export default function Credentials() {
           </p>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 lg:gap-20">
+        <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-10 lg:gap-14">
           {credentials.map((item) => (
-            <div
+            <article
               key={item.name}
-              className="group flex flex-col items-center gap-3 opacity-50 hover:opacity-100 transition-opacity duration-300"
+              className="group flex flex-col items-center gap-3 sm:gap-4 opacity-70 hover:opacity-100 transition-opacity duration-300"
             >
-              {/* Placeholder for logo - replace with actual image/svg */}
-              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-muted/50 border border-border/50 flex items-center justify-center group-hover:border-primary/20 transition-colors">
-                <span className="text-lg sm:text-xl font-bold text-muted-foreground/50">
-                  {item.name.charAt(0)}
-                </span>
-              </div>
+              {item.credentialUrl ? (
+                <Link
+                  href={item.credentialUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-muted/50 border border-border/50 flex items-center justify-center px-2 group-hover:border-primary/20 transition-colors"
+                  aria-label={`${item.shortName} credential`}
+                >
+                  {item.logoSrc ? (
+                    <Image
+                      src={item.logoSrc}
+                      alt={`${item.shortName} logo`}
+                      width={64}
+                      height={64}
+                      className={`${item.logoClassName} object-contain`}
+                    />
+                  ) : (
+                    <span className="text-sm sm:text-base font-semibold text-muted-foreground/80 tracking-wide">
+                      {item.mark}
+                    </span>
+                  )}
+                </Link>
+              ) : (
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-muted/50 border border-border/50 flex items-center justify-center px-2 group-hover:border-primary/20 transition-colors">
+                  {item.logoSrc ? (
+                    <Image
+                      src={item.logoSrc}
+                      alt={`${item.shortName} logo`}
+                      width={64}
+                      height={64}
+                      className={`${item.logoClassName} object-contain`}
+                    />
+                  ) : (
+                    <span className="text-sm sm:text-base font-semibold text-muted-foreground/80 tracking-wide">
+                      {item.mark}
+                    </span>
+                  )}
+                </div>
+              )}
               <span className="text-sm sm:text-base font-medium tracking-tight text-foreground/80 group-hover:text-foreground transition-colors">
-                {item.name}
+                {item.shortName}
               </span>
-              <span className="text-[10px] text-muted-foreground uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity -mt-1">
-                {item.type}
-              </span>
-            </div>
+            </article>
           ))}
         </div>
       </Container>

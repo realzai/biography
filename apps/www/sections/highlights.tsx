@@ -11,71 +11,29 @@ import {
   Github,
   ArrowUpRight,
   Folder,
+  LucideIcon,
 } from "lucide-react";
 import projects from "@repo/data/profile/projects";
+import highlightsData from "@repo/data/profile/highlights";
 
-const highlights = [
-  {
-    icon: Code2,
-    stat: "50+",
-    label: "Projects Built",
-    description: "From concept to deployment",
-  },
-  {
-    icon: Users,
-    stat: "10K+",
-    label: "Users Reached",
-    description: "Across multiple platforms",
-  },
-  {
-    icon: Lightbulb,
-    stat: "3+",
-    label: "Years Experience",
-    description: "In software development",
-  },
-  {
-    icon: Zap,
-    stat: "99%",
-    label: "Client Satisfaction",
-    description: "Quality-driven results",
-  },
-];
+const iconMap: Record<string, LucideIcon> = {
+  "Projects Built": Code2,
+  "Users Reached": Users,
+  "Years Experience": Lightbulb,
+  "Client Satisfaction": Zap,
+};
 
-const otherProjects = [
-  {
-    title: "Burmese Wiki Dataset",
-    description: "Curated dataset for Burmese NLP research",
-    tech: ["HuggingFace", "NLP"],
-    link: "https://huggingface.co/datasets/zaibutcooler/wiki-burmese",
-  },
-  {
-    title: "Personal Portfolio",
-    description: "This website - built with Next.js & Tailwind",
-    tech: ["Next.js", "TypeScript"],
-    link: "https://github.com/realzai/biography",
-  },
-  {
-    title: "Premerly",
-    description: "AI-powered platform for real estate agents",
-    tech: ["React", "AI"],
-    link: "https://github.com/realzai",
-  },
-  {
-    title: "ML Experiments",
-    description: "Collection of machine learning notebooks",
-    tech: ["Python", "PyTorch"],
-    link: "https://github.com/realzai",
-  },
-  {
-    title: "Open Source",
-    description: "Various contributions to the community",
-    tech: ["OSS"],
-    link: "https://github.com/realzai",
-  },
-];
+const otherProjects = projects
+  .filter((p) => !p.pin)
+  .map((p) => ({
+    title: p.title,
+    description: p.description,
+    tech: p.techStack.slice(0, 2),
+    link: p.links[0]?.href || "#",
+  }));
 
 export default function Highlights() {
-  const featuredProject = projects[0];
+  const featuredProject = projects.find((p) => p.pin);
 
   return (
     <section className="py-24 sm:py-32">
@@ -92,14 +50,16 @@ export default function Highlights() {
 
         {/* Stats Cards */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-          {highlights.map((item, index) => (
+          {highlightsData.map((item, index) => {
+            const Icon = iconMap[item.label] || Zap;
+            return (
             <div
               key={index}
               className="group relative p-6 sm:p-8 rounded-2xl border bg-gradient-to-br from-slate-50/50 to-white dark:from-slate-900/50 dark:to-slate-800/50 hover:shadow-lg hover:border-primary/20 transition-all duration-300"
             >
               {/* Icon */}
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-4 group-hover:scale-110 transition-transform duration-300">
-                <item.icon className="w-6 h-6" />
+                <Icon className="w-6 h-6" />
               </div>
 
               {/* Stat */}
@@ -120,7 +80,8 @@ export default function Highlights() {
               {/* Subtle accent line */}
               <div className="absolute bottom-0 left-6 right-6 h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
-          ))}
+          );
+          })}
         </div>
 
         {/* Featured Project Section */}
