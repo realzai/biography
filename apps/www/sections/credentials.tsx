@@ -14,7 +14,7 @@ export default function Credentials() {
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-10 lg:gap-14">
-          {credentials.map((item) => (
+          {credentials.filter((c) => c.www).map((item) => (
             <article
               key={item.name}
               className="group flex flex-col items-center gap-3 sm:gap-4 opacity-70 hover:opacity-100 transition-opacity duration-300"

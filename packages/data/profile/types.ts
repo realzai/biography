@@ -17,5 +17,6 @@ export interface Project {
     href: string;
   }[];
   pin: boolean;
+  resume: boolean;
   info: { label: ContentLabel; content: string }[];
 }

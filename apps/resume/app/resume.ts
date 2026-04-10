@@ -1,6 +1,7 @@
 import { GitHubIcon, LinkedInIcon, XIcon } from "~/components/icons";
 import profile from "@repo/data/profile";
 import clients from "@repo/data/profile/clients";
+import credentials from "@repo/data/profile/credentials";
 import skills from "@repo/data/profile/skills";
 import education from "@repo/data/profile/education";
 import projects from "@repo/data/profile/projects";
@@ -37,7 +38,8 @@ export const RESUME_DATA = {
   },
   works,
   skills,
-  education,
-  projects,
+  education: education.filter((e) => e.resume),
+  projects: projects.filter((p) => p.resume),
+  credentials: credentials.filter((c) => c.resume),
   clients,
 } as const;

@@ -5,6 +5,7 @@ const YUME: Project = {
   title: "Yume (夢)",
   image: "/placeholder.svg",
   pin: false,
+  resume: false,
   techStack: ["Python", "PyTorch", "HuggingFace", "LLMs"],
   description:
     "A GPT-style Japanese language model trained on anime and manga dialogues, built from scratch with PyTorch. Implements self-attention with Flash Attention support, top-k sampling, and model configurations scaling from 100M to 1B parameters. My very first deep learning project — inspired by Andrej Karpathy's nanoGPT at a time when building your own LLM from scratch was still a novel idea. This project laid the foundation for Burmese-GPT.",
@@ -53,6 +54,7 @@ const PREMERLY: Project = {
   title: "Premerly",
   image: "/placeholder.svg",
   pin: false,
+  resume: true,
   techStack: ["Next.js", "TypeScript", "OpenAI", "Replicate", "Prisma", "Stripe"],
   description:
     "A full-stack AI-powered SaaS platform built for real estate professionals. Generates property descriptions, marketing content, and client communications using OpenAI, redraws floor plans and virtually stages vacant rooms through Replicate's image models, and includes an AI chat assistant, market analysis dashboard, and lead generation tools — all behind Stripe-powered subscription tiers. My first startup project, built during 2023 while simultaneously learning how LLMs worked from the inside out.",
@@ -85,6 +87,7 @@ const BURMESE_GPT: Project = {
   title: "Burmese-GPT",
   image: "/placeholder.svg",
   pin: true,
+  resume: true,
   techStack: ["Python", "PyTorch", "HuggingFace", "Transformers"],
   description:
     "An open-source transformer language model for the Burmese language, built from scratch with PyTorch during 2023 — back when ChatGPT was still on GPT-3.5 and building your own LLM was far from mainstream. One of the earliest efforts to bring large language model research to a low-resource Southeast Asian language, complete with a custom-curated Burmese Wikipedia dataset, a training pipeline, and a live demo on HuggingFace.",
@@ -133,6 +136,7 @@ const UMI: Project = {
   title: "Umi (海)",
   image: "/placeholder.svg",
   pin: false,
+  resume: true,
   techStack: ["Python", "PyTorch", "Diffusers", "HuggingFace Accelerate"],
   description:
     "A diffusion-based image generator implementing Denoising Diffusion Probabilistic Models (DDPM) from scratch. Uses a UNet2D architecture with attention blocks, trains on CIFAR-10 with HuggingFace Accelerate for distributed training, and implements the full DDPM noise scheduling pipeline. Built to understand how diffusion models generate images from pure noise — the same fundamental technique behind Stable Diffusion and DALL-E.",
@@ -165,6 +169,7 @@ const DEEPMINE: Project = {
   title: "Deepmine",
   image: "/placeholder.svg",
   pin: false,
+  resume: true,
   techStack: ["Ruby", "Deep Learning", "Autograd", "Neural Networks"],
   description:
     "A PyTorch-style deep learning framework written from scratch in Ruby. Implements tensors with gradient tracking, backpropagation, neural network layers (Linear, Conv2D, ReLU, Sigmoid, Tanh), an SGD optimizer, and loss functions (MSE, CrossEntropy). Built to deeply understand how frameworks like PyTorch work under the hood — by reimplementing one in a language with no existing deep learning ecosystem.",
@@ -197,6 +202,7 @@ const COMMITO: Project = {
   title: "Commito",
   image: "/placeholder.svg",
   pin: false,
+  resume: false,
   techStack: ["Go", "Cobra", "Groq", "CLI"],
   description:
     "A lightweight CLI tool that analyzes git diffs and uses LLMs to suggest meaningful commit messages or answer questions about code changes. Built with Go and Cobra, with a pluggable AI provider system supporting Groq and OpenAI.",

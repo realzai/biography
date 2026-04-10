@@ -39,10 +39,10 @@ const clients: Clients[] = [
     logo: "",
   },
   {
-    title: "Atif",
-    techStack: ["pytorch", "lightning-ai", "transformers", "gpt"],
+    title: "Sagaing Thu",
+    techStack: ["nestjs", "react", "react-native", "offline-sync"],
     description:
-      "Help developing an image encoder-decoder model for Piping and instrumentation diagram (P&ID) diagrams which is the heart of Chemical Engineering.",
+      "Built an entire POS application end-to-end — a React web dashboard, a React Native mobile app, and a NestJS backend — with an offline syncing flow so the system stays operational even without internet connectivity.",
     link: {
       label: "#",
       href: "#",
@@ -59,6 +59,19 @@ const clients: Clients[] = [
     link: {
       label: "resonant-app.com",
       href: "https://resonant-app.com",
+    },
+    pin: false,
+    resume: true,
+    logo: "",
+  },
+  {
+    title: "Greenway Plan Management",
+    techStack: ["next.js", "typescript", "full-stack"],
+    description:
+      "Built the website and client portal for an Australian NDIS plan management provider that handles invoice processing, budget tracking, and payment management for participants.",
+    link: {
+      label: "greenwayplans.com.au",
+      href: "https://www.greenwayplans.com.au",
     },
     pin: false,
     resume: true,

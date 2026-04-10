@@ -5,6 +5,7 @@ const education = [
     degree: "B.E. Computer Science",
     start: "2022",
     end: "2025",
+    resume: true,
     courses: [],
   },
   {
@@ -13,6 +14,7 @@ const education = [
     description: "",
     start: "2020",
     end: "2021",
+    resume: true,
     courses: [],
   },
   {
@@ -21,6 +23,7 @@ const education = [
     description: "",
     start: "2020",
     end: "2018",
+    resume: false,
     courses: [],
   },
 ];
