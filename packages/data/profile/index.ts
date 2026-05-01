@@ -14,7 +14,7 @@ const profile = {
     "I am a software engineer who loves to solve real world problems with technology. I have a passion for building products that make people's lives easier and more enjoyable. I am always looking for new challenges and opportunities to learn and grow.",
   avatar: images.midnight,
   website: "https://www.kingzai.com",
-  email: "zaibutcooler@icloud.com",
+  email: "realzai@proton.me",
   urls: {
     github: "https://github.com/realzai",
     linkedIn: "https://www.linkedin.com/in/saiyeyintaung/",

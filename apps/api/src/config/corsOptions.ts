@@ -1,6 +1,10 @@
 import { CorsOptions } from "cors";
 
-const allowedOrigins = ["https://www.kingzai.com", "https://about.kingzai.com"];
+const allowedOrigins = [
+  "https://kingzai.com",
+  "https://www.kingzai.com",
+  "https://about.kingzai.com",
+];
 
 const corsOptions: CorsOptions = {
   origin: (

@@ -4,6 +4,7 @@ import { JetBrains_Mono } from "next/font/google";
 import { PropsWithChildren } from "react";
 import { Analytics } from "@vercel/analytics/next";
 import { siteConfig } from "@repo/data/site";
+import { Toaster } from "~/components/toaster";
 
 const mono = JetBrains_Mono({ subsets: ["latin"] });
 const description =
@@ -63,6 +64,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
     <html lang="en">
       <body className={mono.className}>
         {children}
+        <Toaster />
         <Analytics />
       </body>
     </html>
