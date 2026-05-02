@@ -11,12 +11,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: siteConfig.contactUrl,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 1,
-    },
-    {
       url: siteConfig.galleryUrl,
       lastModified: new Date(),
       changeFrequency: "yearly",

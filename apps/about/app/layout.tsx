@@ -6,9 +6,9 @@ import { Analytics } from "@vercel/analytics/next";
 import { Toaster } from "~/components/toaster";
 
 export const metadata: Metadata = {
-  title: "Sai Ye Yint Aung",
+  title: "Who Is Sai Ye Yint Aung? | Zai",
   description:
-    "Sai Ye Yint Aung (Zai) is a passionate entrepreneur and software engineer from Myanmar, building innovative tech solutions and sharing insights on web development, AI, and startups.",
+    "The personal story of Sai Ye Yint Aung, also known as Zai: a software engineer, entrepreneur, and product builder.",
   keywords: [
     "Sai Ye Yint Aung",
     "Software Engineer",

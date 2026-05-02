@@ -6,8 +6,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: siteConfig.productionUrl,
       lastModified: new Date(),
-      changeFrequency: "yearly",
+      changeFrequency: "monthly",
       priority: 1,
+    },
+    {
+      url: `${siteConfig.productionUrl}/contact`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
   ];
 }
