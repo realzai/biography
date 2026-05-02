@@ -4,6 +4,8 @@ import { buttonVariants } from "@repo/ui/components/ui/button";
 import Image from "next/image";
 import { siteConfig } from "@repo/data/site";
 
+const calendlyUrl = "https://calendly.com/saiyeyintaung";
+
 export default function Hero() {
   return (
     <Container className="flex flex-col sm:flex-row justify-between items-center mt-24 sm:mt-48 mb-24 sm:mb-48 gap-12 text-center sm:text-left">
@@ -19,18 +21,20 @@ export default function Hero() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center sm:justify-start">
           <Link
-            href={siteConfig.aboutUrl}
+            href={siteConfig.contactUrl}
             className={buttonVariants({ size: "lg" })}
           >
-            About Me
-            {/*私について*/}
+            Contact Me
+            {/*お問い合わせ*/}
           </Link>
           <Link
-            href={siteConfig.contactUrl}
+            href={calendlyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className={buttonVariants({ size: "lg", variant: "ghost" })}
           >
-            Contact Now
-            {/*お問い合わせ*/}
+            Schedule a Meeting
+            {/*ミーティングを予約*/}
           </Link>
         </div>
       </article>
