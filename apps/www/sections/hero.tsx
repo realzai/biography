@@ -4,8 +4,6 @@ import { buttonVariants } from "@repo/ui/components/ui/button";
 import Image from "next/image";
 import { siteConfig } from "@repo/data/site";
 
-const calendlyUrl = "https://calendly.com/saiyeyintaung";
-
 export default function Hero() {
   return (
     <Container className="flex flex-col sm:flex-row justify-between items-center mt-24 sm:mt-48 mb-24 sm:mb-48 gap-12 text-center sm:text-left">
@@ -28,7 +26,7 @@ export default function Hero() {
             {/*お問い合わせ*/}
           </Link>
           <Link
-            href={calendlyUrl}
+            href={siteConfig.bookingUrl}
             target="_blank"
             rel="noopener noreferrer"
             className={buttonVariants({ size: "lg", variant: "ghost" })}

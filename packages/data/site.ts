@@ -6,4 +6,5 @@ export const siteConfig = {
   contactUrl: "https://kingzai.com/contact",
   projectsUrl: "https://github.com/realzai?tab=repositories",
   rootUrl: "https://kingzai.com",
+  bookingUrl: "https://cal.com/saiyeyintaung",
 };
